@@ -26,31 +26,6 @@ document.querySelector("#emailLink").href = `mailto:${profile.email}`;
 document.querySelector("#linkedinLink").href = profile.linkedin;
 document.querySelector("#websiteLink").href = profile.website;
 
-function buildVCard(data) {
-  const lines = [
-    "BEGIN:VCARD",
-    "VERSION:3.0",
-    "N:Arroyo Navarro;Marcos;;;",
-    `FN:${data.name}`,
-    `ORG:${data.company}`,
-    `TITLE:${data.role}`,
-    `TEL;TYPE=CELL,VOICE:${data.phoneHref}`,
-    `EMAIL;TYPE=INTERNET:${data.email}`,
-    `URL:${data.website}`,
-    "ADR;TYPE=WORK:;;;;Madrid;;Spain",
-    `NOTE:${data.tagline}`,
-    "END:VCARD",
-  ];
-
-  return `${lines.join("\\n")}\\n`;
-}
-
-const saveContact = document.querySelector("#saveContact");
-if (saveContact && URL.createObjectURL) {
-  const blob = new Blob([buildVCard(profile)], { type: "text/vcard;charset=utf-8" });
-  saveContact.href = URL.createObjectURL(blob);
-}
-
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function setTilt(xRatio, yRatio, strength = 5) {
