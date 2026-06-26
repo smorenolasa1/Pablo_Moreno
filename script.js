@@ -1,7 +1,7 @@
 const profile = {
   // Edit this block to update the visible card, links, share text and generated VCF download.
   name: "Marcos Arroyo Navarro",
-  role: "Founder | Principal Mechanical Engineer",
+  role: "Founder | Chief Engineer",
   company: "Arroyo Systems",
   tagline: "Engineering for Machined Components",
   location: "Madrid, Spain",
