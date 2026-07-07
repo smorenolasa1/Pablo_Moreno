@@ -1,19 +1,19 @@
 :root {
   color-scheme: dark;
-  --navy-950: #06111d;
-  --navy-900: #0a1828;
-  --navy-800: #10263b;
-  --metal-blue: #1f6f9e;
-  --sky: #74d3ff;
-  --steel: #8ea2b3;
+  --navy-950: #050b14;
+  --navy-900: #071421;
+  --navy-800: #102234;
+  --evercore-blue: #143c5a;
+  --evercore-gold: #a8792c;
+  --steel: #8b9aa6;
   --white: #f7fbfd;
-  --ink: #071a2d;
-  --ink-soft: #26394a;
-  --muted: #607284;
-  --card-border: rgba(65, 115, 150, 0.22);
-  --card-bg: rgba(244, 248, 250, 0.9);
+  --ink: #06111d;
+  --ink-soft: #263341;
+  --muted: #5f6c76;
+  --card-border: rgba(168, 121, 44, 0.28);
+  --card-bg: rgba(248, 249, 248, 0.92);
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.42);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -29,9 +29,9 @@ body {
 body {
   /* Dark steel environment with only broad, quiet light for contrast. */
   background:
-    radial-gradient(circle at 18% 10%, rgba(57, 137, 179, 0.18), transparent 29rem),
-    radial-gradient(circle at 85% 80%, rgba(61, 91, 118, 0.2), transparent 25rem),
-    linear-gradient(145deg, #050c15 0%, #0a1828 46%, #121820 100%);
+    radial-gradient(circle at 18% 10%, rgba(40, 84, 118, 0.22), transparent 29rem),
+    radial-gradient(circle at 85% 80%, rgba(168, 121, 44, 0.13), transparent 25rem),
+    linear-gradient(145deg, #050b14 0%, #071421 48%, #111821 100%);
   color: var(--white);
   overflow-x: hidden;
 }
@@ -43,7 +43,7 @@ body::before {
   pointer-events: none;
   background-image:
     linear-gradient(rgba(116, 211, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(116, 211, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(168, 121, 44, 0.026) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: radial-gradient(circle at center, black 0%, transparent 78%);
 }
@@ -81,7 +81,7 @@ body::before {
 .ambient-two {
   right: -14%;
   bottom: 8%;
-  background: rgba(80, 112, 140, 0.32);
+  background: rgba(168, 121, 44, 0.26);
 }
 
 .business-card {
@@ -97,9 +97,9 @@ body::before {
   border-radius: 28px;
   background:
     linear-gradient(118deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0) 24%),
-    linear-gradient(150deg, rgba(255, 255, 255, 0) 0 38%, rgba(110, 161, 190, 0.16) 48%, rgba(255, 255, 255, 0) 60%),
-    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.16) 0 1px, rgba(83, 111, 130, 0.035) 1px 3px),
-    linear-gradient(145deg, #fbfdfe 0%, #edf3f7 45%, #dce7ee 100%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0) 0 38%, rgba(168, 121, 44, 0.12) 48%, rgba(255, 255, 255, 0) 60%),
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.16) 0 1px, rgba(84, 93, 101, 0.035) 1px 3px),
+    linear-gradient(145deg, #fbfcfc 0%, #f0f2f2 45%, #e0e5e7 100%),
     var(--card-bg);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(73, 103, 125, 0.12);
   backdrop-filter: blur(18px) saturate(112%);
@@ -120,7 +120,7 @@ body::before {
   border-radius: inherit;
   background:
     radial-gradient(circle at var(--shine-x) var(--shine-y), rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.2) 18%, transparent 38%),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.9), transparent 24%, rgba(61, 128, 165, 0.22) 68%, transparent);
+    linear-gradient(120deg, rgba(255, 255, 255, 0.9), transparent 24%, rgba(168, 121, 44, 0.18) 68%, transparent);
   opacity: 0.7;
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
@@ -142,8 +142,8 @@ body::before {
   background:
     radial-gradient(circle at var(--shine-x) var(--shine-y), rgba(255, 255, 255, 0.82), transparent 24%),
     linear-gradient(115deg, transparent 0 34%, rgba(255, 255, 255, 0.26) 44%, transparent 56%),
-    linear-gradient(90deg, transparent 0 39px, rgba(37, 92, 125, 0.05) 40px, transparent 41px),
-    linear-gradient(transparent 0 39px, rgba(37, 92, 125, 0.035) 40px, transparent 41px);
+    linear-gradient(90deg, transparent 0 39px, rgba(20, 60, 90, 0.045) 40px, transparent 41px),
+    linear-gradient(transparent 0 39px, rgba(168, 121, 44, 0.028) 40px, transparent 41px);
   background-size: 80px 80px;
   mix-blend-mode: soft-light;
   transition: opacity 220ms ease;
@@ -153,16 +153,17 @@ body::before {
   display: grid;
   gap: 16px;
   padding: 14px 16px 13px;
-  border: 1px solid rgba(65, 115, 150, 0.14);
-  border-radius: 20px;
+  border: 1px solid rgba(168, 121, 44, 0.18);
+  border-radius: 12px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(226, 236, 242, 0.58)),
-    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.18) 0 1px, rgba(58, 87, 108, 0.035) 1px 3px);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(232, 235, 236, 0.6)),
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.18) 0 1px, rgba(76, 82, 88, 0.034) 1px 3px);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 10px 26px rgba(29, 58, 78, 0.08);
 }
 
 .brand-logo {
   width: min(78%, 286px);
+  max-height: 74px;
   height: auto;
   object-fit: contain;
   filter: none;
@@ -171,7 +172,7 @@ body::before {
 .metal-line {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(31, 111, 158, 0.44), rgba(255, 255, 255, 0.8), transparent);
+  background: linear-gradient(90deg, rgba(168, 121, 44, 0.64), rgba(255, 255, 255, 0.8), transparent);
 }
 
 .identity {
@@ -180,10 +181,10 @@ body::before {
 
 .eyebrow {
   margin: 0 0 10px;
-  color: #176f9e;
+  color: var(--evercore-blue);
   font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -230,7 +231,7 @@ h1 {
   justify-content: center;
   gap: 9px;
   border: 1px solid rgba(40, 91, 123, 0.2);
-  border-radius: 15px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.56);
   color: var(--ink);
   font: inherit;
@@ -245,9 +246,9 @@ h1 {
 .action-primary {
   min-height: 54px;
   border-color: rgba(26, 98, 143, 0.48);
-  background: linear-gradient(135deg, #155c87, #2681b1);
+  background: linear-gradient(135deg, #102234, #143c5a);
   color: #f8fcff;
-  box-shadow: 0 14px 34px rgba(24, 104, 151, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  box-shadow: 0 14px 34px rgba(16, 34, 52, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
 .action:hover,

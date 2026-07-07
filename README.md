@@ -1,29 +1,31 @@
-# Arroyo Systems Business Card
+# Pablo Moreno Business Card
 
-Static digital business card for Marcos Arroyo Navarro and Arroyo Systems, ready to publish with GitHub Pages.
+Static digital business card for Pablo Moreno at Evercore, ready to publish with GitHub Pages.
 
 ## Files
 
 - `index.html`: page markup and Open Graph metadata.
 - `styles.css`: mobile-first visual design, responsive layout, glassmorphism and animations.
 - `script.js`: editable profile configuration, 3D/touch movement and Web Share API.
-- `assets/marcos-arroyo-navarro.vcf`: downloadable contact card.
-- `assets/arroyo-systems-logo-transparent.png`: logo prepared without the original white rectangle.
-- `assets/favicon.png` and `assets/apple-touch-icon.png`: icon assets.
+- `assets/pablo-moreno.vcf`: downloadable contact card.
+- `assets/evercore-seeklogo-2.svg`: Evercore logo. Add this file before publishing.
 
 ## Edit Contact Data
 
-Update the profile data in `script.js`. The visible card, links, share text and downloaded contact are generated from this block:
+Update the profile data in `script.js`. The visible card, links and share text are controlled from this block:
 
 ```js
 const profile = {
-  phone: "+34 691 01 89 74",
-  phoneHref: "+34691018974",
-  email: "marcos@arroyo-systems.com",
+  name: "Pablo Moreno",
+  role: "Investment Banking Analyst",
+  company: "Evercore",
+  tagline: "Utilities, Infrastructure & Transport M&A",
+  location: "London, United Kingdom",
+  linkedin: "https://www.linkedin.com/in/pablo-moreno-lasa-924890254/",
 };
 ```
 
-`assets/marcos-arroyo-navarro.vcf` is included as a static fallback, but modern browsers download the VCF generated from `script.js`.
+`assets/pablo-moreno.vcf` is included as the static contact download.
 
 After publishing, replace the Open Graph image URL in `index.html` with the final absolute GitHub Pages URL for the strongest WhatsApp and LinkedIn previews.
 

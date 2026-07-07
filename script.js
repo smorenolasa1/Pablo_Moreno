@@ -1,16 +1,13 @@
 const profile = {
   // Edit this block to update the visible card, links, share text and generated VCF download.
-  name: "Marcos Arroyo Navarro",
-  role: "Founder | Chief Engineer",
-  company: "Arroyo Systems",
-  tagline: "Engineering for Machined Components",
-  location: "Madrid, Spain",
-  phone: "+34 691 01 89 74",
-  phoneHref: "+34691018974",
-  email: "marcos@arroyo-systems.com",
-  website: "https://www.arroyo-systems.com",
-  linkedin: "https://www.linkedin.com/in/marcos-arroyo-navarro/",
-  vcard: "assets/marcos-arroyo-navarro.vcf",
+  name: "Pablo Moreno",
+  role: "Investment Banking Analyst",
+  company: "Evercore",
+  tagline: "Utilities, Infrastructure & Transport M&A",
+  location: "London, United Kingdom",
+  companyPage: "https://www.linkedin.com/company/163732/",
+  linkedin: "https://www.linkedin.com/in/pablo-moreno-lasa-924890254/",
+  vcard: "assets/pablo-moreno.vcf",
 };
 
 const card = document.querySelector("#businessCard");
@@ -21,10 +18,8 @@ document.querySelector("#roleText").textContent = profile.role;
 document.querySelector("#taglineText").textContent = profile.tagline;
 document.querySelector("#locationText").textContent = profile.location;
 document.querySelector("#saveContact").href = profile.vcard;
-document.querySelector("#phoneLink").href = `tel:${profile.phoneHref}`;
-document.querySelector("#emailLink").href = `mailto:${profile.email}`;
 document.querySelector("#linkedinLink").href = profile.linkedin;
-document.querySelector("#websiteLink").href = profile.website;
+document.querySelector("#companyLink").href = profile.companyPage;
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
