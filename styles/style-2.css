@@ -48,8 +48,9 @@ body::before {
   pointer-events: none;
   background:
     linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 26px 26px;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 14px);
+  background-size: 26px 26px, 26px 26px, 18px 18px;
   opacity: 0.34;
   mask-image: radial-gradient(circle at center, black 24%, transparent 86%);
 }
@@ -156,6 +157,7 @@ body::before {
     linear-gradient(180deg, rgba(199, 181, 138, 0.05), transparent 16%),
     linear-gradient(96deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 18px),
     linear-gradient(8deg, rgba(199, 181, 138, 0.02) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 16px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 14%),
     radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent 34%),
     linear-gradient(135deg, #262c67 0%, #202757 46%, #171d46 100%);
@@ -193,7 +195,10 @@ body::before {
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.1), transparent 16%),
     radial-gradient(circle at 82% 28%, rgba(199, 181, 138, 0.08), transparent 18%),
     linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.045) 45%, transparent 60%),
-    linear-gradient(180deg, transparent 0 72%, rgba(255, 255, 255, 0.035) 88%, transparent 100%);
+    linear-gradient(180deg, transparent 0 72%, rgba(255, 255, 255, 0.035) 88%, transparent 100%),
+    linear-gradient(90deg, transparent 0 31px, rgba(255, 255, 255, 0.022) 32px, transparent 33px),
+    linear-gradient(transparent 0 31px, rgba(199, 181, 138, 0.022) 32px, transparent 33px);
+  background-size: auto, auto, auto, auto, 64px 64px, 64px 64px;
 }
 
 .card-header {
@@ -384,24 +389,86 @@ h1 {
     left: 12px;
     right: 12px;
     min-width: 0;
+    padding: 12px;
   }
 
   .page-shell {
-    padding-top: max(108px, env(safe-area-inset-top));
+    padding-top: max(104px, env(safe-area-inset-top));
   }
 
   .business-card {
-    border-radius: 36px;
-    padding: 26px;
+    width: min(100%, 480px);
+    border-radius: 34px;
+    padding: 22px 20px 20px;
   }
 
   .brand-logo {
-    width: min(100%, 520px);
-    max-height: 132px;
+    width: min(100%, 500px);
+    max-height: 114px;
   }
 
   h1 {
-    font-size: clamp(1.32rem, 6.8vw, 1.82rem);
+    font-size: clamp(1.22rem, 6vw, 1.68rem);
+    line-height: 1.08;
+  }
+
+  .identity {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+  }
+
+  .role {
+    font-size: clamp(0.88rem, 3.7vw, 0.98rem);
+    letter-spacing: 0.09em;
+  }
+
+  .tagline {
+    font-size: clamp(0.74rem, 3vw, 0.84rem);
+    letter-spacing: 0.12em;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .action,
+  .share-button {
+    min-height: 50px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .business-card {
+    border-radius: 30px;
+    padding: 20px 16px 18px;
+  }
+
+  .card-header {
+    padding-bottom: 18px;
+  }
+
+  .brand-logo {
+    max-height: 98px;
+  }
+
+  .style-switcher-controls {
+    gap: 6px;
+  }
+
+  .style-option {
+    min-height: 36px;
+    font-size: 0.84rem;
   }
 }
 
