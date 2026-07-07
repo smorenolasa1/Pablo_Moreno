@@ -1,6 +1,6 @@
-# Pablo Moreno Business Card
+# Pablo Moreno Lasa Business Card
 
-Static digital business card for Pablo Moreno at Evercore, ready to publish with GitHub Pages.
+Static digital business card for Pablo Moreno Lasa at Evercore, ready to publish with GitHub Pages.
 
 ## Files
 
@@ -16,7 +16,7 @@ Update the profile data in `script.js`. The visible card, links and share text a
 
 ```js
 const profile = {
-  name: "Pablo Moreno",
+  name: "Pablo Moreno Lasa",
   role: "Investment Banking Analyst",
   company: "Evercore",
   tagline: "Utilities, Infrastructure & Transport M&A",

@@ -1,6 +1,6 @@
 const profile = {
   // Edit this block to update the visible card, links, share text and generated VCF download.
-  name: "Pablo Moreno",
+  name: "Pablo Moreno Lasa",
   role: "Investment Banking Analyst",
   company: "Evercore",
   tagline: "Utilities, Infrastructure & Transport M&A",
@@ -12,12 +12,13 @@ const profile = {
 
 const card = document.querySelector("#businessCard");
 const shareButton = document.querySelector("#shareButton");
+const saveContact = document.querySelector("#saveContact");
 
 document.querySelector("#personName").textContent = profile.name;
 document.querySelector("#roleText").textContent = profile.role;
 document.querySelector("#taglineText").textContent = profile.tagline;
 document.querySelector("#locationText").textContent = profile.location;
-document.querySelector("#saveContact").href = profile.vcard;
+saveContact.href = profile.vcard;
 document.querySelector("#linkedinLink").href = profile.linkedin;
 document.querySelector("#companyLink").href = profile.companyPage;
 
@@ -65,6 +66,16 @@ if (card && !prefersReducedMotion) {
     const xRatio = Math.min(Math.max((event.gamma + 18) / 36, 0), 1);
     const yRatio = Math.min(Math.max((event.beta - 20) / 50, 0), 1);
     setTilt(xRatio, yRatio, 3.4);
+  });
+}
+
+if (saveContact) {
+  saveContact.addEventListener("click", () => {
+    window.setTimeout(() => saveContact.blur(), 160);
+  });
+
+  window.addEventListener("pageshow", () => {
+    saveContact.blur();
   });
 }
 
