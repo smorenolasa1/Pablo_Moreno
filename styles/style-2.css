@@ -34,6 +34,7 @@ body {
   background:
     radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.08), transparent 22rem),
     radial-gradient(circle at 84% 78%, rgba(199, 181, 138, 0.16), transparent 20rem),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.03) 0 12%, transparent 12% 24%, rgba(255, 255, 255, 0.02) 24% 36%, transparent 36%),
     linear-gradient(135deg, #151a42 0%, #1d2455 42%, #262c67 100%);
   color: var(--ink-light);
   overflow-x: hidden;
@@ -81,7 +82,7 @@ body::before {
 
 .style-switcher-controls {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -151,6 +152,8 @@ body::before {
   border: 1px solid var(--panel-outline);
   border-radius: 42px;
   background:
+    linear-gradient(96deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 18px),
+    linear-gradient(8deg, rgba(199, 181, 138, 0.02) 0 1px, transparent 1px 22px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 14%),
     radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent 34%),
     linear-gradient(135deg, #262c67 0%, #202757 46%, #171d46 100%);
@@ -183,21 +186,23 @@ body::before {
   position: absolute;
   inset: 0;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.1), transparent 16%),
-    linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.045) 45%, transparent 60%);
+    radial-gradient(circle at 82% 28%, rgba(199, 181, 138, 0.08), transparent 18%),
+    linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.045) 45%, transparent 60%),
+    linear-gradient(180deg, transparent 0 72%, rgba(255, 255, 255, 0.035) 88%, transparent 100%);
 }
 
 .card-header {
   display: flex;
   justify-content: center;
-  padding: 6px 0 34px;
+  padding: 0 0 28px;
 }
 
 .brand-logo {
-  width: min(100%, 440px);
-  max-height: 96px;
+  width: min(100%, 500px);
+  max-height: 116px;
   height: auto;
   object-fit: contain;
   filter: brightness(0) invert(1) opacity(0.94);
@@ -217,8 +222,8 @@ body::before {
 h1 {
   margin: 0;
   color: var(--ink-light);
-  font-size: clamp(2.3rem, 8vw, 3.5rem);
-  line-height: 0.96;
+  font-size: clamp(1.95rem, 6.2vw, 2.8rem);
+  line-height: 0.98;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-wrap: balance;
@@ -389,11 +394,12 @@ h1 {
   }
 
   .brand-logo {
-    max-height: 82px;
+    width: min(100%, 440px);
+    max-height: 98px;
   }
 
   h1 {
-    font-size: clamp(2rem, 10vw, 2.7rem);
+    font-size: clamp(1.75rem, 8.4vw, 2.3rem);
   }
 }
 
