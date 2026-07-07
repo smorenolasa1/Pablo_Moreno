@@ -12,7 +12,7 @@
   --panel-highlight: rgba(255, 255, 255, 0.08);
   --ink-light: #f7f4ee;
   --ink-soft: rgba(247, 244, 238, 0.78);
-  --gold-soft: #c7b58a;
+  --gold-soft: #ceb069;
   --gold-faint: rgba(199, 181, 138, 0.22);
   --button-fill: rgba(255, 255, 255, 0.08);
   --button-fill-strong: rgba(255, 255, 255, 0.14);
@@ -157,7 +157,6 @@ body::before {
     linear-gradient(180deg, rgba(199, 181, 138, 0.05), transparent 16%),
     linear-gradient(96deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 18px),
     linear-gradient(8deg, rgba(199, 181, 138, 0.02) 0 1px, transparent 1px 22px),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 16px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 14%),
     radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent 34%),
     linear-gradient(135deg, #262c67 0%, #202757 46%, #171d46 100%);
@@ -196,9 +195,10 @@ body::before {
     radial-gradient(circle at 82% 28%, rgba(199, 181, 138, 0.08), transparent 18%),
     linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.045) 45%, transparent 60%),
     linear-gradient(180deg, transparent 0 72%, rgba(255, 255, 255, 0.035) 88%, transparent 100%),
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.038) 0 1px, rgba(255, 255, 255, 0) 1px 4px),
     linear-gradient(90deg, transparent 0 31px, rgba(255, 255, 255, 0.022) 32px, transparent 33px),
     linear-gradient(transparent 0 31px, rgba(199, 181, 138, 0.022) 32px, transparent 33px);
-  background-size: auto, auto, auto, auto, 64px 64px, 64px 64px;
+  background-size: auto, auto, auto, auto, auto, 64px 64px, 64px 64px;
 }
 
 .card-header {
