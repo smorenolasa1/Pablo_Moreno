@@ -1,5 +1,5 @@
 const profile = {
-  // Edit this block to update the visible card, links, share text and generated VCF download.
+  // Update this object if contact details change.
   name: "Pablo Moreno Lasa",
   role: "Investment Banking Analyst",
   company: "Evercore",
