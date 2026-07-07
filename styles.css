@@ -165,8 +165,8 @@ body::before {
 
 .brand-logo {
   display: block;
-  width: min(92%, 350px);
-  max-height: 104px;
+  width: min(96%, 390px);
+  max-height: 118px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 18px rgba(6, 17, 29, 0.11));
@@ -184,7 +184,7 @@ body::before {
 }
 
 .eyebrow {
-  margin: 0 0 10px;
+  margin: 10px 0 0;
   color: var(--evercore-blue);
   font-size: 0.76rem;
   font-weight: 700;
@@ -339,7 +339,7 @@ h1 {
   }
 
   .brand-logo {
-    width: min(86%, 310px);
+    width: min(90%, 330px);
   }
 
   .identity {
