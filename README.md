@@ -35,5 +35,3 @@ After publishing, replace the Open Graph image URL in `index.html` with the fina
 2. In GitHub, open Settings > Pages.
 3. Choose the branch and root folder.
 4. Save and wait for GitHub Pages to publish the site.
-
-The site has no backend and no build step.
