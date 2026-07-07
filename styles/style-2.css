@@ -7,16 +7,16 @@
   color-scheme: dark;
   --bg-navy: #23295d;
   --bg-navy-deep: #191f4a;
-  --panel-white: #f7f4ee;
-  --panel-outline: rgba(27, 35, 78, 0.1);
-  --panel-highlight: rgba(255, 255, 255, 0.78);
-  --ink-dark: #20284e;
-  --ink-soft: rgba(32, 40, 78, 0.68);
+  --panel-navy: #262c67;
+  --panel-outline: rgba(255, 255, 255, 0.12);
+  --panel-highlight: rgba(255, 255, 255, 0.08);
+  --ink-light: #f7f4ee;
+  --ink-soft: rgba(247, 244, 238, 0.78);
   --gold-soft: #c7b58a;
-  --gold-faint: rgba(199, 181, 138, 0.2);
-  --button-fill: rgba(32, 40, 78, 0.05);
-  --button-fill-strong: rgba(32, 40, 78, 0.09);
-  --button-border: rgba(32, 40, 78, 0.14);
+  --gold-faint: rgba(199, 181, 138, 0.22);
+  --button-fill: rgba(255, 255, 255, 0.08);
+  --button-fill-strong: rgba(255, 255, 255, 0.14);
+  --button-border: rgba(255, 255, 255, 0.16);
   --shadow: 0 30px 90px rgba(8, 11, 32, 0.46);
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
@@ -33,11 +33,11 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.08), transparent 22rem),
-    radial-gradient(circle at 84% 78%, rgba(199, 181, 138, 0.16), transparent 20rem),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.03) 0 12%, transparent 12% 24%, rgba(255, 255, 255, 0.02) 24% 36%, transparent 36%),
-    linear-gradient(135deg, #151a42 0%, #1d2455 42%, #262c67 100%);
-  color: var(--ink-dark);
+    radial-gradient(circle at 20% 12%, rgba(35, 41, 93, 0.08), transparent 22rem),
+    radial-gradient(circle at 84% 78%, rgba(199, 181, 138, 0.14), transparent 20rem),
+    linear-gradient(120deg, rgba(35, 41, 93, 0.04) 0 12%, transparent 12% 24%, rgba(199, 181, 138, 0.035) 24% 36%, transparent 36%),
+    linear-gradient(180deg, #fbfaf7 0%, #f2eee7 100%);
+  color: var(--ink-light);
   overflow-x: hidden;
 }
 
@@ -47,11 +47,11 @@ body::before {
   content: "";
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 14px);
+    linear-gradient(rgba(35, 41, 93, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 41, 93, 0.02) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(199, 181, 138, 0.024) 0 1px, transparent 1px 14px);
   background-size: 26px 26px, 26px 26px, 18px 18px;
-  opacity: 0.34;
+  opacity: 0.44;
   mask-image: radial-gradient(circle at center, black 24%, transparent 86%);
 }
 
@@ -93,7 +93,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
-  color: rgba(247, 244, 238, 0.96);
+  color: var(--ink-light);
   font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
@@ -131,15 +131,15 @@ body::before {
 .ambient-one {
   top: -6%;
   left: -10%;
-  opacity: 0.42;
-  background: rgba(255, 255, 255, 0.12);
+  opacity: 0.22;
+  background: rgba(35, 41, 93, 0.16);
 }
 
 .ambient-two {
   right: -12%;
   bottom: -4%;
-  opacity: 0.4;
-  background: rgba(199, 181, 138, 0.22);
+  opacity: 0.32;
+  background: rgba(199, 181, 138, 0.18);
 }
 
 .business-card {
@@ -154,11 +154,13 @@ body::before {
   border: 1px solid var(--panel-outline);
   border-radius: 42px;
   background:
-    linear-gradient(180deg, rgba(199, 181, 138, 0.08), transparent 16%),
-    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.2) 0 1px, rgba(255, 255, 255, 0) 1px 3px),
-    linear-gradient(96deg, rgba(32, 40, 78, 0.028) 0 1px, transparent 1px 18px),
-    linear-gradient(8deg, rgba(199, 181, 138, 0.028) 0 1px, transparent 1px 22px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 244, 238, 0.94) 38%, rgba(236, 232, 224, 0.98) 100%);
+    linear-gradient(180deg, rgba(199, 181, 138, 0.05), transparent 16%),
+    linear-gradient(96deg, rgba(255, 255, 255, 0.024) 0 1px, transparent 1px 18px),
+    linear-gradient(8deg, rgba(199, 181, 138, 0.02) 0 1px, transparent 1px 22px),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.018) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 14%),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent 34%),
+    linear-gradient(135deg, #262c67 0%, #202757 46%, #171d46 100%);
   box-shadow: var(--shadow);
   transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translate3d(0, 0, 0);
   animation: cardEnter 760ms ease-out both, slowDrift 16s ease-in-out 1000ms infinite;
@@ -174,7 +176,7 @@ body::before {
 .business-card::before {
   inset: 0;
   border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent 76%);
 }
 
@@ -190,12 +192,12 @@ body::before {
   z-index: -1;
   opacity: 0.3;
   background:
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.44), transparent 16%),
-    radial-gradient(circle at 82% 28%, rgba(199, 181, 138, 0.12), transparent 18%),
-    linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.22) 45%, transparent 60%),
-    linear-gradient(180deg, transparent 0 72%, rgba(32, 40, 78, 0.03) 88%, transparent 100%),
-    linear-gradient(90deg, transparent 0 31px, rgba(32, 40, 78, 0.02) 32px, transparent 33px),
-    linear-gradient(transparent 0 31px, rgba(199, 181, 138, 0.03) 32px, transparent 33px);
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.1), transparent 16%),
+    radial-gradient(circle at 82% 28%, rgba(199, 181, 138, 0.08), transparent 18%),
+    linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.045) 45%, transparent 60%),
+    linear-gradient(180deg, transparent 0 72%, rgba(255, 255, 255, 0.035) 88%, transparent 100%),
+    linear-gradient(90deg, transparent 0 31px, rgba(255, 255, 255, 0.022) 32px, transparent 33px),
+    linear-gradient(transparent 0 31px, rgba(199, 181, 138, 0.022) 32px, transparent 33px);
   background-size: auto, auto, auto, auto, 64px 64px, 64px 64px;
 }
 
@@ -210,7 +212,7 @@ body::before {
   max-height: 168px;
   height: auto;
   object-fit: contain;
-  filter: none;
+  filter: brightness(0) invert(1) opacity(0.96) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.14));
 }
 
 .metal-line {
@@ -226,7 +228,7 @@ body::before {
 
 h1 {
   margin: 0;
-  color: var(--ink-dark);
+  color: var(--ink-light);
   font-size: clamp(1.48rem, 4.3vw, 2.05rem);
   line-height: 1.04;
   font-weight: 500;
@@ -257,7 +259,7 @@ h1 {
 
 .tagline {
   margin: 0;
-  color: rgba(32, 40, 78, 0.62);
+  color: rgba(247, 244, 238, 0.72);
   font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(0.82rem, 2.4vw, 0.92rem);
   font-weight: 500;
@@ -287,7 +289,7 @@ h1 {
   border: 1px solid var(--button-border);
   border-radius: 999px;
   background: var(--button-fill);
-  color: var(--ink-dark);
+  color: var(--ink-light);
   font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
@@ -299,9 +301,8 @@ h1 {
 }
 
 .action-primary {
-  background: linear-gradient(135deg, #26315f, #1d2550);
-  border-color: rgba(32, 40, 78, 0.12);
-  color: #f7f4ee;
+  background: linear-gradient(135deg, rgba(247, 244, 238, 0.16), rgba(255, 255, 255, 0.08));
+  border-color: rgba(247, 244, 238, 0.28);
 }
 
 .action:active,
@@ -312,7 +313,7 @@ h1 {
 .action:focus-visible,
 .share-button:focus-visible,
 .style-option:focus-visible {
-  outline: 2px solid rgba(32, 40, 78, 0.3);
+  outline: 2px solid rgba(247, 244, 238, 0.55);
   outline-offset: 3px;
 }
 
@@ -326,7 +327,7 @@ h1 {
   .action:hover,
   .share-button:hover {
     background: var(--button-fill-strong);
-    border-color: rgba(32, 40, 78, 0.22);
+    border-color: rgba(255, 255, 255, 0.24);
   }
 }
 
