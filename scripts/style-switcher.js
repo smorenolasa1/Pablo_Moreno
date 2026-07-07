@@ -1,9 +1,10 @@
 const STYLE_STORAGE_KEY = "business-card-style";
 const DEFAULT_STYLE = "style-1";
-const AVAILABLE_STYLES = new Set(["style-1", "style-2"]);
+const AVAILABLE_STYLES = new Set(["style-1", "style-2", "style-3"]);
 const STYLE_THEME_COLORS = {
   "style-1": "#071421",
   "style-2": "#262c67",
+  "style-3": "#232960",
 };
 
 const stylesheetLink = document.querySelector("#themeStylesheet");

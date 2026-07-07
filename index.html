@@ -22,7 +22,7 @@
     <script>
       (function () {
         var savedStyle = localStorage.getItem("business-card-style");
-        var activeStyle = savedStyle === "style-2" ? "style-2" : "style-1";
+        var activeStyle = ["style-1", "style-2", "style-3"].indexOf(savedStyle) >= 0 ? savedStyle : "style-1";
         document.documentElement.setAttribute("data-selected-style", activeStyle);
 
         var themeStylesheet = document.createElement("link");
@@ -43,6 +43,7 @@
       <div class="style-switcher-controls" role="group" aria-label="Seleccionar estilo visual">
         <button class="style-option" type="button" data-style-option="style-1" aria-pressed="false">Estilo 1</button>
         <button class="style-option" type="button" data-style-option="style-2" aria-pressed="false">Estilo 2</button>
+        <button class="style-option" type="button" data-style-option="style-3" aria-pressed="false">Estilo 3</button>
       </div>
     </aside>
 

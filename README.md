@@ -7,6 +7,7 @@ Static digital business card for Pablo Moreno Lasa at Evercore, ready to publish
 - `index.html`: page markup and Open Graph metadata.
 - `styles/style-1.css`: current visual direction.
 - `styles/style-2.css`: alternate visual direction for client review.
+- `styles/style-3.css`: alternate lateral layout with a larger logo and identity block beside it.
 - `scripts/style-switcher.js`: swaps the active stylesheet and stores the preference in `localStorage`.
 - `scripts/card.js`: editable profile configuration, 3D/touch movement and Web Share API.
 - `assets/pablo-moreno.vcf`: downloadable contact card.
@@ -34,7 +35,7 @@ const profile = {
 The site is set up so the client can compare two styles without changing the HTML:
 
 - `index.html` stays shared.
-- The selector swaps between `styles/style-1.css` and `styles/style-2.css`.
+- The selector swaps between `styles/style-1.css`, `styles/style-2.css`, and `styles/style-3.css`.
 - The selected style is saved in `localStorage`.
 
 When the client chooses one direction, remove the switcher block in `index.html`, remove `scripts/style-switcher.js`, and keep only the chosen stylesheet in the `<head>`.
