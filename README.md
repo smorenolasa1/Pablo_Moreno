@@ -5,9 +5,9 @@ Static digital business card for Pablo Moreno Lasa at Evercore, ready to publish
 ## Files
 
 - `index.html`: page markup and Open Graph metadata.
-- `styles/style-1.css`: current visual direction.
+- `styles/imp_style.css`: active style used by the page right now.
+- `styles/style-1.css`: saved version of Style 1.
 - `styles/style-2.css`: alternate visual direction for client review.
-- `scripts/style-switcher.js`: swaps the active stylesheet and stores the preference in `localStorage`.
 - `scripts/card.js`: editable profile configuration, 3D/touch movement and Web Share API.
 - `assets/pablo-moreno.vcf`: downloadable contact card.
 - `assets/evercore-seeklogo-2.svg`: Evercore logo. Add this file before publishing.
@@ -29,15 +29,14 @@ const profile = {
 
 `assets/pablo-moreno.vcf` is included as the static contact download.
 
-## Choosing A Final Style
+## Changing The Active Style
 
-The site is set up so the client can compare two styles without changing the HTML:
+The page now loads only one stylesheet:
 
-- `index.html` stays shared.
-- The selector swaps between `styles/style-1.css` and `styles/style-2.css`.
-- The selected style is saved in `localStorage`.
+- `index.html` points to `styles/imp_style.css`.
+- `styles/style-1.css` and `styles/style-2.css` are kept as alternates.
 
-When the client chooses one direction, remove the switcher block in `index.html`, remove `scripts/style-switcher.js`, and keep only the chosen stylesheet in the `<head>`.
+To switch styles later, replace `styles/imp_style.css` with whichever version you want active, or rename files so the chosen one becomes `imp_style.css`.
 
 After publishing, replace the Open Graph image URL in `index.html` with the final absolute GitHub Pages URL for the strongest WhatsApp and LinkedIn previews.
 

@@ -18,34 +18,9 @@
 
     <link rel="icon" type="image/svg+xml" href="assets/evercore-seeklogo-2.svg" />
     <link rel="preload" href="assets/evercore-seeklogo-2.svg" as="image" />
-    <!-- Remove this inline script and keep one fixed stylesheet once the client chooses a final direction. -->
-    <script>
-      (function () {
-        var savedStyle = localStorage.getItem("business-card-style");
-        var activeStyle = ["style-1", "style-2"].indexOf(savedStyle) >= 0 ? savedStyle : "style-1";
-        document.documentElement.setAttribute("data-selected-style", activeStyle);
-
-        var themeStylesheet = document.createElement("link");
-        themeStylesheet.rel = "stylesheet";
-        themeStylesheet.id = "themeStylesheet";
-        themeStylesheet.href = "styles/" + activeStyle + ".css";
-        document.head.appendChild(themeStylesheet);
-      })();
-    </script>
-    <noscript>
-      <link rel="stylesheet" href="styles/style-1.css" />
-    </noscript>
+    <link rel="stylesheet" href="styles/imp_style.css" />
   </head>
   <body>
-    <!-- Remove this entire switcher block after the client approves a final style. -->
-    <aside class="style-switcher" aria-label="Style comparison">
-      <p class="style-switcher-label">Comparar estilos</p>
-      <div class="style-switcher-controls" role="group" aria-label="Seleccionar estilo visual">
-        <button class="style-option" type="button" data-style-option="style-1" aria-pressed="false">Estilo 1</button>
-        <button class="style-option" type="button" data-style-option="style-2" aria-pressed="false">Estilo 2</button>
-      </div>
-    </aside>
-
     <main class="page-shell" aria-label="Digital business card">
       <div class="ambient ambient-one" aria-hidden="true"></div>
       <div class="ambient ambient-two" aria-hidden="true"></div>
@@ -99,7 +74,6 @@
       </section>
     </main>
 
-    <script src="scripts/style-switcher.js" defer></script>
     <script src="scripts/card.js" defer></script>
   </body>
 </html>
