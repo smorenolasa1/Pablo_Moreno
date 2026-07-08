@@ -84,21 +84,22 @@ if (saveContact) {
   });
 }
 
-if (shareButton && navigator.share) {
+if (shareButton) {
   shareButton.hidden = false;
   shareButton.addEventListener("click", async () => {
-    try {
-      await navigator.share({
-        title: `${profile.name} | ${profile.company}`,
-        text: `${profile.role} at ${profile.company}`,
-        url: window.location.href,
-      });
-    } catch (error) {
-      if (error.name !== "AbortError") {
-        window.location.href = `mailto:?subject=${encodeURIComponent(profile.name)}&body=${encodeURIComponent(window.location.href)}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${profile.name} | ${profile.company}`,
+          text: `${profile.role} at ${profile.company}`,
+          url: window.location.href,
+        });
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
       }
     }
+
+    window.location.href = `mailto:?subject=${encodeURIComponent(profile.name)}&body=${encodeURIComponent(window.location.href)}`;
   });
-} else if (shareButton) {
-  shareButton.hidden = true;
 }
