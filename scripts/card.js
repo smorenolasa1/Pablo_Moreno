@@ -5,7 +5,12 @@ const profile = {
   company: "Evercore",
   tagline: "Utilities, Infrastructure & Transport M&A",
   location: "London, United Kingdom",
-  companyPage: "https://www.linkedin.com/company/163732/",
+  address: "15 Stanhope Gate, London W1K 1LN",
+  phone: "+44 (0)20 7046 6805",
+  phoneHref: "+442070466805",
+  mobile: "+44 (0)7407 818 541",
+  mobileHref: "+447407818541",
+  email: "pablo.morenolasa@evercore.com",
   linkedin: "https://www.linkedin.com/in/pablo-moreno-lasa-924890254/",
   vcard: "assets/pablo-moreno.vcf",
 };
@@ -20,7 +25,7 @@ document.querySelector("#taglineText").textContent = profile.tagline;
 document.querySelector("#locationText").textContent = profile.location;
 saveContact.href = profile.vcard;
 document.querySelector("#linkedinLink").href = profile.linkedin;
-document.querySelector("#companyLink").href = profile.companyPage;
+document.querySelector("#emailLink").href = `mailto:${profile.email}`;
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
