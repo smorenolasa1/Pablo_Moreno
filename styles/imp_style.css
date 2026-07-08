@@ -108,7 +108,7 @@ body::before {
   min-height: 100dvh;
   place-items: center;
   padding:
-    max(88px, env(safe-area-inset-top))
+    max(18px, env(safe-area-inset-top))
     max(18px, env(safe-area-inset-right))
     max(18px, env(safe-area-inset-bottom))
     max(18px, env(safe-area-inset-left));
@@ -233,7 +233,7 @@ body::before {
 }
 
 .eyebrow {
-  margin: 16px 0 0;
+  margin: 0 0 10px;
   color: var(--evercore-blue);
   font-size: 0.68rem;
   font-weight: 650;
@@ -243,7 +243,7 @@ body::before {
 
 h1 {
   margin: 0;
-  color: var(--ink);
+  color: #16253a;
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
   font-size: clamp(1.42rem, 5.8vw, 2.12rem);
   line-height: 1.06;
@@ -260,8 +260,8 @@ h1 {
 .tagline {
   margin: 18px 0 0;
   color: var(--muted);
-  font-size: clamp(0.98rem, 3.7vw, 1.08rem);
-  font-weight: 650;
+  font-size: clamp(0.9rem, 3.2vw, 0.98rem);
+  font-weight: 560;
   line-height: 1.35;
 }
 
